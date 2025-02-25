@@ -1,0 +1,5 @@
+- name: Update the hostname on the server
+  hosts: webservers
+  become: true
+  roles:
+    - update_hostname
