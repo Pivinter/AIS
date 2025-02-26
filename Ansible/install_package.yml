@@ -1,0 +1,6 @@
+---
+- name: Install package
+  hosts: webservers
+  become: true
+  roles:
+    - install_package

@@ -1,0 +1,11 @@
+---
+- name: Get information about the system
+  ansible.builtin.setup:  
+  tags: always
+
+- name: Installing a package via APT (for Debian)
+  become: true
+  ansible.builtin.apt:
+    name: "{{ package_name }}"
+    state: present
+  when: ansible_os_family == "Debian"
