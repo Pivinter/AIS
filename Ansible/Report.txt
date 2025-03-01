@@ -1,0 +1,19 @@
+Using /etc/ansible/ansible.cfg as config file
+
+PLAY [Update the hostname on the server] ***************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [52.166.120.154]
+
+TASK [update_hostname : Update hostname] ***************************************
+ok: [52.166.120.154] => {"ansible_facts": {"ansible_domain": "internal.cloudapp.net", "ansible_fqdn": "name-surename-lab2.internal.cloudapp.net", "ansible_hostname": "Vladuslav-Kuliavets-lab2", "ansible_nodename": "Vladuslav-Kuliavets-lab2"}, "changed": false, "name": "Vladuslav-Kuliavets-lab2"}
+
+TASK [update_hostname : Ensure /etc/hostname] **********************************
+ok: [52.166.120.154] => {"changed": false, "checksum": "208874fdd81a4f71613ddac0d97631588540e12d", "dest": "/etc/hostname", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/etc/hostname", "size": 25, "state": "file", "uid": 0}
+
+TASK [update_hostname : Reboot hostname] ***************************************
+changed: [52.166.120.154] => {"changed": true, "cmd": ["hostnamectl", "set-hostname", "Vladuslav-Kuliavets-lab2"], "delta": "0:00:00.007504", "end": "2025-03-01 11:16:05.456422", "msg": "", "rc": 0, "start": "2025-03-01 11:16:05.448918", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+52.166.120.154             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

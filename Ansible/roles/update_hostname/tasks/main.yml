@@ -2,12 +2,12 @@
 - name: Update hostname
   become: true
   ansible.builtin.hostname:
-    name: "name-surename-lab2"
+    name: "Vladuslav-Kuliavets-lab2"
 
 - name: Ensure /etc/hostname
   become: true
   ansible.builtin.copy:
-    content: "name-surename-lab2\n"
+    content: "Vladuslav-Kuliavets-lab2\n"
     dest: /etc/hostname
     owner: root
     group: root
@@ -15,4 +15,4 @@
 
 - name: Reboot hostname
   become: true
-  ansible.builtin.command: hostnamectl set-hostname name-surename-lab2
+  ansible.builtin.command: hostnamectl set-hostname Vladuslav-Kuliavets-lab2
