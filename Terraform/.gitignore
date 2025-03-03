@@ -1,0 +1,12 @@
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Terraform lock file
+.terraform.lock.hcl
+
+# Terraform providers cache
+.terraform/
+
+# Файли ліцензії (можна додати, якщо не потрібні)
+LICENSE.txt
